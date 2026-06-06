@@ -319,8 +319,6 @@ $.extend(PGL.prototype, {
 
     var pokemon_name = (that.isMyProfile) ? pdw.pokemon_profile : data.pokemon_name;
 
-    console.log(pokemon_name);
-
     if (pdw.pokemon_profile == PGL.Text.get('global.fennels_munna')) {
       $('#pdw-slept-name').squeezeText(pdw.pokemon_profile);
       $('#pdw-pokemon-status .nickname').text(PGL.Text.get('trial.pokemon.nickname'));

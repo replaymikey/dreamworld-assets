@@ -172,9 +172,6 @@ PGL.prototype = {
       }
     }
 
-    console.log(this.level);
-    console.log(this.state);
-
     if (!this.data.medals || !this.data.medals.length) {
       this.data.medals = [];
     }
