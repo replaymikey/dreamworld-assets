@@ -62,13 +62,13 @@
 	<string id="y_af_9">y_af_9</string>
 	<string id="y_af_10">y_af_10</string>
 	<string id="y_af_11">y_af_11</string>
-	<string id="y_ag_1" unofficial="true">I'm sorry you didn't succeed at Ice Cream Scoop.</string>
+	<string id="y_ag_1" unofficial="true">Non sei riuscito a fare un gelato.</string>
 	<string id="y_ag_2">y_ag_2</string>
-	<string id="y_ag_3" unofficial="true">I'm sorry you didn't complete the Sky Race.</string>
+	<string id="y_ag_3" unofficial="true">Non hai completato la Corsa aerea.</string>
 	<string id="y_ag_4">y_ag_4</string>
 	<string id="y_ag_5">Non hai trovato il Pokémon smarrito.</string>
 	<string id="y_ag_6">y_ag_6</string>
-	<string id="y_ag_7" unofficial="true">I'm sorry you didn't succeed at Wailord's Water Spout.</string>
+	<string id="y_ag_7" unofficial="true">Non hai avuto successo sulla schiena di Wailord.</string>
 	<string id="y_ag_8">y_ag_8</string>
 	<string id="y_ag_9">[ポケモン名] è triste...</string>
 	<string id="y_ag_10">y_ag_10</string>
@@ -77,7 +77,7 @@
 	<string id="y_ag_13">y_ag_13</string>
 	<string id="y_ag_14">y_ag_14</string>
 	<string id="y_ag_15">y_ag_15</string>
-	<string id="y_ag_16">y_ag_16</string>
+	<string id="y_ag_16" unofficial="true">Non hai avuto successo sul ghiaccio.</string>
 	<string id="y_ag_17">y_ag_17</string>
 	<string id="y_ag_18">y_ag_18</string>
 	<string id="y_ag_19">y_ag_19</string>

@@ -13,8 +13,8 @@
 	<string id="da_ad_1">An hour has passed since you began playing.</string>
 	<string id="da_ad_2">One hour has passed since you started playing. Please click one of the buttons and exit the Pokémon DW.</string>
 	<string id="da_ad_6">Select this option to exit the Pokémon DW&amp;#xD;temporarily.</string>
-	<string id="da_af_1">da_af_1</string>
-	<string id="da_af_2">da_af_2</string>
+	<string id="da_af_1" unofficial="true">You played in the Pokémon Dream World for an hour.</string>
+	<string id="da_af_2" unofficial="true">It's been one hour since you've started playing. Please click one of the buttons and exit the Pokémon DW.</string>
 	<string id="dc_aa_1">List of Pokémon to take</string>
 	<string id="dc_aa_2">After using Game Sync to wake up your Pokémon, go to the Entree Forest to meet the Pokémon you took.</string>
 	<string id="dc_aa_3">If there is another Pokémon you'd like to take, click "Back" and check the Friend Board in your&amp;#xD;home.</string>
@@ -25,7 +25,7 @@
 	<string id="dc_ac_2">Get the items you sent to the Entralink from the boy at the Entree Forest after waking your&amp;#xD;Pokémon.</string>
 	<string id="dc_ac_3">If you want to change items, click "Back" and select items to send to the Entralink from&amp;#xD;the Treasure Chest in your room.</string>
 	<string id="dc_ac_4">Exit the Pokémon DW</string>
-	<string id="dc_ae_2">dc_ae_2</string>
+	<string id="dc_ae_2" unofficial="true">Sorry, there's no Pokémon to take.</string>
 	<string id="dc_af_2">Sorry, there's no item to send to the Entralink.</string>
 	<string id="o_abb_1">You have left the Pokémon Dream World.&amp;#xD;Now, wake your Pokémon with Game Sync.</string>
 	<string id="o_az_1">You have left the Pokémon Dream World.</string>
@@ -63,7 +63,7 @@
 	<string id="pg_amf_1" unofficial="true">A database error has occured.&amp;#xD;You have been disconnected.</string>
 	<string id="pg_amh_1">Welcome to the Pokémon Dream World.</string>
 	<string id="pg_amh_2">You can play in the Pokémon DW for one hour.</string>
-	<string id="pg_amh_3">You can only play for an hour in the Pokémon Dream World, then it&amp;#xD;stops automatically. It's a good idea to stop playing and save your data&amp;#xD;when asked, so you can be sure your data gets saved properly.</string>
+	<string id="pg_amh_3">You can only play for an hour in the Pokémon Dream World, then it stops automatically. It's a good idea to stop playing and save your data when asked, so you can be sure your data gets saved properly.</string>
 	<string id="pg_amh_4">Continue</string>
 	<string id="pg_amk_1">pg_amk_1</string>
 	<string id="pg_ay_2" unofficial="true">OK</string>

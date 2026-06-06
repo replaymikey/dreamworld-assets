@@ -10,7 +10,11 @@
 			path = (path.indexOf("/cdn2.pokemon-gl.com/") === 0 ? path : "/cdn2.pokemon-gl.com/" + path.replace(/^\/+/, ""));
 		}
 	}
-	
+
+	var hasMinVersion = swfobject.hasFlashPlayerVersion("10.0.2");
+	console.log("Flash version >= 10.0.2?", hasMinVersion);
+	var flashVer = swfobject.getFlashPlayerVersion();
+	console.log("Detected Flash:", flashVer.major, flashVer.minor, flashVer.release);
 	
 	if (swfobject.hasFlashPlayerVersion("10.0.2"))
 	{		

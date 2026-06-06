@@ -9,9 +9,8 @@
 	<string id="b_ad_3">N.</string>
 	<string id="b_ad_6">OK</string>
 	<string id="b_ad_7" unofficial="true">Annulla</string>
-	<string id="b_ae_1">Send the item(s) in the list?</string>
-	<string id="b_af_1">b_af_1</string>
-	<string id="b_af_2">Dopo aver svegliato il Pokémon con il Sincrogioco, potrai ricevere gli strumenti inviati parlando al ragazzo all'ingresso del Bosco Intramondo.</string>
+	<string id="b_ae_1" unofficial="true">Vuoi inviare questi strumenti?</string>
+	<string id="b_af_1" unofficial="true">Strumenti da portare nell'Intramondo</string>
 	<string id="b_ah_1">b_ah_1</string>
 	<string id="b_ai_1">b_ai_1</string>
 	<string id="b_az_1">Chiudi</string>
