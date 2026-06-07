@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<data locale="ko" />
+<data locale="ko">
+	<string id="m_aa_2" letterSpacing="-0.05" />
+</data>
