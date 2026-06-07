@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<data locale="ko" />
+<data locale="ko">
+	<string id="c_ad_4" leading="12" />
+	<string id="c_bd_1" letterSpacing="-0.2" />
+</data>

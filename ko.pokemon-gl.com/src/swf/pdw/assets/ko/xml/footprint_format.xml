@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<data locale="ko" />
+<data locale="ko">
+	<string id="f_af_7" letterSpacing="-0.25" leading="7" />
+	<string id="f_af_8" letterSpacing="-0.15" />
+	<string id="f_af_9" letterSpacing="-0.15" />
+</data>
