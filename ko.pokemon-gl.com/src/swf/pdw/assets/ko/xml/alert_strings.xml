@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data locale="ko">
 	<string id="da_aa_1">da_aa_1</string>
-	<string id="da_aa_2">da_aa_2</string>
+	<string id="da_aa_2">포켓몬을 깨울 준비를 하고 종료</string>
 	<string id="da_aa_3">da_aa_3</string>
 	<string id="da_aa_4">da_aa_4</string>
-	<string id="da_aa_5">da_aa_5</string>
+	<string id="da_aa_5">포켓몬을 깨운 상태로 종료</string>
 	<string id="da_aa_6">da_aa_6</string>
 	<string id="da_ab_1">da_ab_1</string>
-	<string id="da_ab_2">da_ab_2</string>
+	<string id="da_ab_2">[!]꿈의나무에서 소원을 빌어 사이가 좋아진 포켓몬이 보드에 있는 상태로는 계속 즐길 때 꿈섬으로 가는 무지개가 나타나지 않습니다.</string>
 	<string id="da_ab_3">da_ab_3</string>
-	<string id="da_ab_4">da_ab_4</string>
+	<string id="da_ab_4">PDW를 계속하기</string>
 	<string id="da_ad_1">da_ad_1</string>
 	<string id="da_ad_2">da_ad_2</string>
 	<string id="da_ad_6">da_ad_6</string>
