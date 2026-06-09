@@ -19,7 +19,7 @@ $.extend(PGL.prototype, {
         var romlink =  $('<a></a>').appendTo($('#login-control .member-info-rom'));
         if (that.data.member.gsid_count <= 1) {
           romlink.attr('href', 'profile/#/register-gsid/')
-            .addClass('member-info-rom-register').click(false);
+            .addClass('member-info-rom-register');
         } else {
           romlink.attr('href', 'profile/#/change-rom/')
             .addClass('member-info-rom-change');
@@ -48,22 +48,19 @@ $.extend(PGL.prototype, {
         if (data.member.last_up_time) {
           $('#login-control .member-info-pdw-slepttime').text(data.member.last_up_time);
         }
-        
-        if (this.level == PGL.TRIAL) {
-          pdwStatusText = PGL.Text.get('pgltop.pdw.trial_closed');
-        }
+
         $('#pdw-link-message .text').text(pdwStatusText).show();
 
         this.updatePDWBusyStatus();
 
 
 //        if (location.host.indexOf('pokemon-gl') == -1) {
-//          $('#right-buttons .login-menu-logout').attr({ href:'/en.pokemon-gl.com/index3?p=logout' });
+//          $('#right-buttons .login-menu-logout').attr({ href:'/index3?p=logout' });
 //        }
 
         var trafficId = data.member.world_id * 12345 - 6789;
         var trafficType = this.level == PGL.TRIAL ? 'trial' : 'product';
-        $('#inline-footer-map area:not(area[href])').attr({ href:'/en.pokemon-gl.com/traffic/' + trafficType + '_' + trafficId + '/' });
+        $('#inline-footer-map area:not(area[href])').attr({ href:'/traffic/' + trafficType + '_' + trafficId + '/' });
         
         if (this.level == PGL.TRIAL) {
           $('#login-control .login-menu-mailer, #login-control .login-menu-customize')
@@ -100,7 +97,7 @@ $.extend(PGL.prototype, {
         .appendTo($('#login-control'));
       }, function () {
         $('<iframe class="login-frame" border="0" frameborder="0" allowtransparency="true" scrolling="no" marginwidth="0" marginheight="0"></iframe>')
-        .attr({ src: '/en.pokemon-gl.com/src/swf/top/' + PGL.language + '/images/login-unavailable.png' })
+        .attr({ src: 'http://' + that.host.getPageAssetHost() + '/src/swf/top/' + PGL.language + '/images/login-unavailable.png' })
         .appendTo($('#login-control'));
       });
       
@@ -233,7 +230,7 @@ $.extend(PGL.prototype, {
     
     $.each(data, function(index, news) {
       if (news.filename_top) {
-        var image = '/src/swf/information/assets/' + PGL.language + '/img' + news.filename_top;
+        var image = 'http://' + that.host.getCmsImageHost() + '/src/swf/information/assets/' + PGL.language + '/img' + news.filename_top;
       } else {
         var image = '/top/assets/images/info-default/' + news.news_category_id + '.png';
       }
@@ -342,7 +339,7 @@ $.extend(PGL.prototype, {
     if (image) {
       dialog.addClass('has-image');
       var dialogImage = $('<div class="dialog-information-image"></div>').insertBefore(dialogBody);
-      $('<img/>').attr({ src:'/en.pokemon-gl.com/src/swf/information/assets/' + PGL.language + '/img' + image }).appendTo(dialogImage);
+      $('<img/>').attr({ src:'http://' + that.host.getCmsImageHost() + '/src/swf/information/assets/' + PGL.language + '/img' + image }).appendTo(dialogImage);
     }
     return that.showPopup(dialog, { html:true }, { left:240, 'margin-left':0 });
   },
@@ -448,15 +445,12 @@ $.extend(PGL.prototype, {
     this.pdw.updateLinkMessage(this.data.member.nextstart_remaintime);
     setTimeout($.proxy(this.updatePDWBusyStatus, this), 60 * 1000);
   },
-  onPDWClick: function(event) {
+  onPDWClick: function() {
     if (this.level == PGL.NOT_SIGNED_UP) {
       this.showDialog(PGL.Text.get('new_pdwstart_1'), { ok:true }); // 非会員
       return false;
     } else if (this.level == PGL.INTERIM_REGISTERED) {
-      this.showDialog(PGL.Text.get('dialog_29'), { ok:true }); // 仮登録
-      return false;
-    } else if (this.level == PGL.TRIAL) {
-      this.showDialog(PGL.Text.get('pgltop.pdw.trial_closed.dialog'), { ok:true }); // 体験版
+      this.show_dialog(PGL.Text.get('dialog_29'), { ok:true }); // 仮登録
       return false;
     } else {
       var that = this;
@@ -514,7 +508,7 @@ $.extend(PGL.PDW.prototype, {
     var can_re_enter = remains > PGL.PDW.INTERMISSION - PGL.PDW.RE_ENTER_DURATION;
     var can_enter    = remains <= 0;
     if (can_enter || can_re_enter) {
-      //$('#pdw-link-message .text').text(PGL.Text.get('pgltop.accept_time.4')).show();
+//      $('#pdw-link-message .text').text(PGL.Text.get('pgltop.accept_time.4')).show();
     } else {
       var text;
       if (remains <= 60) {
@@ -524,7 +518,7 @@ $.extend(PGL.PDW.prototype, {
       } else {
         text = PGL.Text.get('pgltop.accept_time.1').replace(/\[HH\]/, Math.ceil(remains / 3600));
       }
-      //$('#pdw-link-message .text').text(text).show();
+//      $('#pdw-link-message .text').text(text).show();
     }
 
 
@@ -601,7 +595,7 @@ PGL.setMain(function() {
   } else if (window.Audio) {
     /*
     try {
-      var audio = new Audio('/src/swf/report/sounds/pgl.m4a');
+      var audio = new Audio('http://' + this.host.getPageAssetHost() + '/src/swf/report/sounds/pgl.m4a');
       var playAudio = function () {
         try {
           audio.loop = true;
@@ -627,7 +621,7 @@ PGL.setMain(function() {
     // 時間に応じた世界地図
     var utcHours = (new Date()).getUTCHours();
     var host = new PGL.Host();
-    $('#map').css({ 'background-image':'url(/cdn2.pokemon-gl.com/src/swf/report/images/earth/' + utcHours + '.jpg)' });
+    $('#map').css({ 'background-image':'url(http://' + host.getPageAssetHost() + '/src/swf/report/images/earth/' + utcHours + '.jpg)' });
     $('#map-container').css({ 'background-position':utcHours / 24 * -1600 });
   })();
   
@@ -954,7 +948,7 @@ PGL.setMain(function() {
       function showBattleUser(target, user) {
         target.attr({ 'class':user.result });
         target.find('.result').squeezeText(PGL.Text.get('global.gbu.' + user.result));
-        target.find('.avatar').empty().append($('<img/>').attr({ src:'/en.pokemon-gl.com/profile/assets/images/avatar/' + user.avator_id + '.png' }));
+        target.find('.avatar').empty().append($('<img/>').attr({ src:'/profile/assets/images/avatar/' + user.avator_id + '.png' }));
         target.find('.pglname').text(user.nickName);
         target.find('.country').text(PGL.Report.areasByPGL[user.country_id].iso3166);
         target.find('.rating .value').text(user.rating);
@@ -1018,7 +1012,7 @@ PGL.setMain(function() {
         $('#report-records .area .iso-3166-1').text(area.iso3166);
         $('#report-records .area').hide();
         $('#report-records .most-slept-pokemon').pokemon({ pokedex:mostSlept.pokedex });
-        $('#report-records .most-slept-pokemon .footprint img').attr({ src:'/en.pokemon-gl.com/report/assets/images/footprint/' + ('00' + mostSlept.pokedex).substr(-3) + '.png' });
+        $('#report-records .most-slept-pokemon .footprint img').attr({ src:'/report/assets/images/footprint/' + ('00' + mostSlept.pokedex).substr(-3) + '.png' });
         
         var d = new Date();
         d.setTime(d.getTime() + area.tz.offset * 60 * 60 * 1000);
@@ -1066,7 +1060,7 @@ PGL.setMain(function() {
       function showBattleUser(target, user) {
         target.attr({ 'class':user.result });
         target.find('.result').text(PGL.Text.get('global.gbu.' + user.result));
-        target.find('.avatar').empty().append($('<img/>').attr({ src:'/en.pokemon-gl.com/profile/assets/images/avatar/' + user.avator_id + '.png' }));
+        target.find('.avatar').empty().append($('<img/>').attr({ src:'/profile/assets/images/avatar/' + user.avator_id + '.png' }));
         target.find('.pglname').text(user.nickName);
         target.find('.country').text(PGL.Report.areasByPGL[user.country_id].iso3166);
         target.find('.rating .value').text(user.rating);

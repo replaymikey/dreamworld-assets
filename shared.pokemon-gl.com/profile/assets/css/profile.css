@@ -1,5 +1,5 @@
 
-@import "dialog.css";
+@import "dialog.css?rev=4";
 
 #container, #header {
   width: 990px;

@@ -1,103 +1,125 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>ポケモングローバルリンク | Pok&eacute;mon GLOBAL LINK</title>
-	<script type="text/javascript" src="/theme/assets/js/jquery-1.4.3.min.js"></script>
-	<script type="text/javascript" src="/theme/assets/js/swfobject.js"></script>
-	<script type="text/javascript" src="/theme/assets/js/theme.js?rev=6"></script>
-	<script type="text/javascript">
-		$.each(['/theme/assets/css/theme.css', '/theme/assets/' + theme.language + '/css/lang.css'], function (index, path) {
-			var link = document.createElement('link');
-			link.href = 'http://' + theme.get_page_asset_host() + '/src/swf' + path;
-			link.type = 'text/css';
-			link.rel = 'stylesheet';
-			document.getElementsByTagName('head').item(0).appendChild(link);
-		});
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-17682532-2']);
-		_gaq.push(['_setDomainName', '.pokemon-gl.com']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-</head>
-<body oncontextmenu="return false" ondragstart="return false">
-<div id="wrapper">
-	<div id="wrapper-bg"><div id="wrapper-bg-inner"></div></div>
-	<div id="content-block">
-		<div id="content-block-bg"></div>
-		<div id="content">
-			<div id="header">
-				<h1><a href="/"><span>Pok&eacute;mon GLOBAL LINK</span></a></h1>
-				<div id="header-pglname"></div>
-				<div id="header-romname"></div>
-				<div id="header-volume"></div>
-				<a id="header-toplink" href="/"></a>
-			</div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1024" />
+  <title>Pokémon Global Link</title>
+  <link rel="stylesheet" type="text/css" href="http://cdn2.pokemon-gl.com/src/swf/assets/global/css/theme.css" />
+  <link rel="stylesheet" type="text/css" href="http://cdn2.pokemon-gl.com/src/swf/assets/global/ja/css/lang.css" />
+  <script src="/assets/global/js/jquery-1.7.min.js"></script>
+  <script src="/assets/global/js/jquery.blockUI.js"></script>
+  <script src="/assets/global/js/jquery.corner.js"></script>
+  <script src="/assets/global/js/swfobject.js"></script>
+  <script src="/assets/global/js/pgl.js?rev=3"></script>
+  <script src="/assets/global/js/text.js"></script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17682532-2']);
+    _gaq.push(['_setDomainName', '.pokemon-gl.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
-<div style="width:1003px;margin:0;padding:40px 0;background:#ffffff url(/src/swf/error/assets/ja/img/insidebg.gif) top no-repeat;" id="flashcontent">
+</head>
+<body id="wrapper" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+  <div id="container">
+    <div id="header">
+      <div id="logo">
+        <a href="/">Pokémon Global Link</a>
+      </div>
+      <div id="logged-in-info">
+        <div id="header-avatar" class="logged-in"></div>
+        <div id="header-pgln" class="logged-in">
+          <span id="header-pglname"></span>
+        </div>
+        <div id="header-rom" class="logged-in">
+          <span id="header-romname" class="game-card-name"></span>
+        </div>
+        <div id="header-volume"><div id="header-volume-swf"></div></div>
+        <div id="header-rom-change" class="logged-in"></div>
+        <div id="header-logout" class="logged-in"><a href="/?p=logout">ログアウト</a></div>
+        <div id="header-back-to-top" class="logged-out"><a href="/"></a></div>
+      </div>
+      <div id="head-menu">
+        <ul>
+          <li id="head-menu-profile"><a href="/profile">マイページ</a></li>
+          <li id="head-menu-campaign"><a href="/campaign/">キャンペーン</a></li>
+          <li id="head-menu-customize"><a href="/customize">カスタマイズ</a></li>
+          <li id="head-menu-pdw"><a href="/pdw/">ポケモンドリームワールド</a></li>
+          <li id="head-menu-report"><a href="/report/">レポート</a></li>
+          <li id="head-menu-wifi"><a href="/wifi/">Wi-Fi大会</a></li>
+          <li id="head-menu-support"><a href="/support/">サポート</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="main">
+
+<div style="width:1003px;margin:0;padding:40px 0 20px 0;background:#ffffff top no-repeat;" id="flashcontent">
 
 <style type="text/css">
-.finside {width:900px;height:241px;_height:375px;margin:0 0 0 52px;padding:134px 0 0 0;background:url(/src/swf/error/assets/ja/img/bg.jpg) top no-repeat;text-align:center;}
+.logged-in-black #container {
+  background-repeat: no-repeat;
+  background-color:#ffffff;
+}
+#container {
+  background-repeat: no-repeat;
+  background-color:#ffffff;
+}
+.finside {width:1003px;height:533px;margin:0;padding:38px 0 0 0;background:url(/src/swf/error/assets/ja/img/error.ja_bg.jpg) top no-repeat;text-align:center;}
 .finside p {color:#666666;font-size:80%;line-height:1.4;}
 .finside a {color:#f99604;text-decoration:none;}
 .finside div.inside {width:900px;margin:0 auto;text-align:center;}
 .finside img {border:0;}
+.finside p.topimg {margin:0;}
+.finside p.sttl {margin:0 0 8px 0;}
+.finside p.jasc {margin:0 0 15px 0;}
 </style>
 
 <div class="finside">
 
 <div class="inside">
-<p><img src="/src/swf/error/assets/ja/img/ttl_le.gif" width="303" height="45" alt="予期せぬエラーが発生しました。"></p>
-<p><img src="/src/swf/error/assets/ja/img/sttl_le.gif" width="425" height="45" alt="メンバーID,パスワードをお持ちの方は再度ログインしてください。それでも、改善しない場合はしばらくたってからご利用ください。"></p>
+<p class="topimg"><img src="/src/swf/error/assets/ja/img/404_03.png" alt="ページが見つかりません。PAGE NOT FOUND" width="454" height="246"></p>
+<p class="sttl"><img src="/src/swf/error/assets/ja/img/404_05.png" alt="指定されたページは存在しません。" width="454" height="20"></p>
+<p class="jasc"><img src="/src/swf/error/assets/ja/img/404_06.png" alt="お手数ですが、「ポケモングローバルリンク」のトップページからお探しください。
+「ポケモングローバルリンク」内のリンクからこのページにたどり着かれた場合は、
+お手数ですが当サイトの「おといあわせ」よりお知らせください。" width="454" height="59" border="0" usemap="#Map"></p>
+<p><a href="/"><img src="/src/swf/error/assets/ja/img/404_09.png" alt="トップにもどる" width="186" height="41"></a></p>
+</div>
+<map name="Map" id="Map"><area shape="rect" coords="195,43,268,55" href="https://www.pokemon.jp/form/inquiry/" alt="おといあわせ" target="_blank"/></map>
 </div>
 
 </div>
-
-</div>
-		</div>
-	</div>
-	<div id="footer-block">
-		<div id="footer">
-			<div id="footer-menu-row">
-				<script type="text/javascript">
-					document.write('<img src="http://' + theme.get_page_asset_host() + '/src/swf/theme/assets/' + theme.language + '/images/footer-menu.png" width="700" height="31" usemap="#footer-menu-map"/>');
-				</script>
-				<map name="footer-menu-map" id="footer-menu-map">
-					<area shape="rect" coords="0,1,96,15" href="/about/" />
-					<area shape="rect" coords="106,1,213,14" href="/maintenance/" />
-					<area shape="rect" coords="224,1,265,14" href="/terms-of-use/" />
-					<area shape="rect" coords="273,1,437,14" />
-					<area shape="rect" coords="0,18,110,31" href="http://www.pokemon.jp/portal/toroku/pop/privacy_pgl.html" />
-					<area shape="rect" coords="117,18,182,31" href="http://www.pokemon.jp/portal/toroku/pop/copyright_pgl.html" />
-					<area shape="rect" coords="196,18,278,31" href="http://www.pokemon.jp/portal/toroku/pop/browser_pgl.html" />
-					<area shape="rect" coords="285,18,377,31" href="http://www.pokemon.jp/portal/html/faq/faq.cfm?PGL=YES" />
-				</map>
-				<a id="footer-about-campaign-link" class="footer-buttons" href="/about/campaign/"></a>
-				<a id="footer-manual-link" class="footer-buttons" href="/help/"></a>
-				<a id="footer-language-selector" class="footer-buttons" href="http://www.pokemon-gl.com/languages/"></a>
-			</div>
-			<div id="footer-copy-row">
-				<p>© 2011 Pokémon. © 1995-2011 Nintendo/Creatures Inc./GAME FREAK inc. ポケットモンスター・Pokémonは任天堂・クリーチャーズ・ゲームフリークの登録商標です。</p>
-				<p><a href="http://www.nintendo.co.jp/netinfo/index.html" target="_blank">ニンテンドーDS ネットワークメンテナンス情報・稼働状況</a></p>
-			</div>
-			<div id="footer-badges-row">
-				<script type="text/javascript">
-					document.write('<img src="http://' + theme.get_page_asset_host() + '/src/swf/theme/assets/' + theme.language + '/images/footer-badges.png" width="973" height="101" usemap="#footer-badges-map"/>');
-				</script>
-				<map name="footer-badges-map" id="footer-badges-map">
-					<area shape="rect" coords="322,18,462,48" target="_self" id="pdc-toplink" href="http://www.pokemon.jp/portal/top.cfm" />
-					<area shape="rect" coords="470,19,555,45" target="_blank" href="http://www.nintendo.co.jp/" />
-					<area shape="rect" coords="563,11,653,46" target="_blank" href="http://www.pokemon.co.jp/" />
-				</map>
-			</div>
-		</div>
-	</div>
-</div>
+    </div>
+    <div id="footer">
+      <ul id="footer-links">
+        <li><a href="/terms-of-use/">お約束</a></li>
+        <li><a href="/maintenance/">メンテナンス情報</a></li>
+        <li><a href="/browser/">推奨利用環境</a></li>
+        <li><a href="/privacy/">プライバシーポリシー</a></li>
+        <li><a href="/copyright/">コピーライト</a></li>
+        <li><a href="" class="trafficy">ポケモンドリームワールド混雑状況</a></li>
+      </ul>
+      <ul id="select-language">
+        <li>言語選択（Language）: &nbsp;&nbsp;&nbsp;</li>
+        <li><a href="http://ja.pokemon-gl.com">日本語</a></li>
+        <li><a href="http://en.pokemon-gl.com">English</a></li>
+        <li><a href="http://fr.pokemon-gl.com">Français</a></li>
+        <li><a href="http://it.pokemon-gl.com">Italiano</a></li>
+        <li><a href="http://de.pokemon-gl.com">Deutsch</a></li>
+        <li><a href="http://es.pokemon-gl.com">Español</a></li>
+        <li><a href="http://ko.pokemon-gl.com">한국어</a></li>
+      </ul>
+      <div id="copyright">
+        <p>©2013 Pokémon. ©1995-2013 Nintendo/Creatures Inc./GAME FREAK inc. ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの登録商標です。</p>
+        <p class="maintenance"><a href="http://www.nintendo.co.jp/netinfo/index.html" target="_blank">ニンテンドーDS ネットワークメンテナンス情報・稼働状況</a></p>
+      </div>
+      <div id="badges"><a class="footer-badges-nintendo" href="http://www.nintendo.co.jp/" target="_blank"><img src="/assets/global/ja/images/footer/nintendo.png"/></a><a class="footer-badges-pokemon" href="http://www.pokemon.co.jp/" target="_blank"><img src="/assets/global/ja/images/footer/pokemon.png"/></a><a class="footer-badges-pdc" href="http://www.pokemon.jp/" target="_blank"><img src="/assets/global/ja/images/footer/pdc.png"/></a></div>
+    </div>
+  </div>
 </body>
 </html>
 

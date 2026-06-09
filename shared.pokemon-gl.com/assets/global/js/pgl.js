@@ -80,10 +80,10 @@ PGL.prototype = {
         var expires = new Date(); expires.setTime(expires.getTime() + 365 * 24 * 60 * 60 * 1000);
         cookie += 'expires=' + expires.toGMTString() + ';';
         document.cookie = cookie;
-      }).attr({ href:'/en.pokemon-gl.com/' });
+      }).attr({ href:'http://' + location.hostname.replace(/\w\w\./, lang + '.') });
     });
     if ({ en:1, fr:1, it:1, de:1, es:1 }[PGL.language]) {
-      var gus_src = this.host.code == 2918 ? '/gus.pokemon.com/' + PGL.language + '/' : '/pgl-363/' + PGL.language + '/';
+      var gus_src = this.host.code == 2918 ? 'http://gus.pokemon.com/' + PGL.language + '/' : 'http://' + this.host.getComDomain() + '/pgl-363/' + PGL.language + '/';
       $('body').css({ 'padding-top':56 }).prepend($('<iframe id="gus" border="0" frameborder="0" allowtransparency="true" scrolling="no" marginwidth="0" marginheight="0"></iframe>').attr({ src:gus_src }));
     }
   },
@@ -97,15 +97,15 @@ PGL.prototype = {
       var rombutton = $('<a></a>');
       if (this.data.member.gsid_count < 1) {
         rombutton
-          .attr('href', '/en.pokemon-gl.com/profile/#/register-gsid/')
+          .attr('href', '/profile/#/register-gsid/')
           .css({'background-position': '0 bottom'});
       } else if (this.data.member.gsid_count <= 1) {
         rombutton
-          .attr('href', '/en.pokemon-gl.com/profile/#/register-gsid/')
+          .attr('href', '/profile/#/register-gsid/')
           .css({'background-position': '-116px bottom'});
       } else if (this.data.member.gsid_count >= 2) {
         rombutton
-          .attr('href', '/en.pokemon-gl.com/profile/#/change-rom/')
+          .attr('href', '/profile/#/change-rom/')
           .css({'background-position': '-232px bottom'});
       }
       rombutton
@@ -115,7 +115,7 @@ PGL.prototype = {
       
       var trafficId = this.data.member.world_id * 12345 - 6789;
       var trafficType = this.level == PGL.TRIAL ? 'trial' : 'product';
-      $('#footer .trafficy').attr({ href:'/en.pokemon-gl.com/traffic/' + trafficType + '_' + trafficId + '/' }).show();
+      $('#footer .trafficy').attr({ href:'/traffic/' + trafficType + '_' + trafficId + '/' }).show();
     } else {
       
     }
@@ -133,7 +133,7 @@ PGL.prototype = {
         flashvars.color1 = flashvars.color2 = 0xFFFFFF;
       }
       if (/^\/?$/.test(location.pathname)) flashvars.color1 = flashvars.color2 = 0xFFFFFF;
-      swfobject.embedSWF('/src/swf/assets/global/swf/volume.swf', 'header-volume-swf', 56, 20, '10.0.0', null, flashvars, { wmode:'transparent', allowScriptAccess:'always' });
+      swfobject.embedSWF('http://' + this.host.getSwfHost() + '/src/swf/assets/global/swf/volume.swf', 'header-volume-swf', 56, 20, '10.0.0', null, flashvars, { wmode:'transparent', allowScriptAccess:'always' });
     }
   },
   _setState: function(data) {
@@ -454,7 +454,7 @@ PGL.Utils = {
       '⑹':'♪', '⑺':'☀', '⑻':'☁', '⑼':'☂', '⑽':'☃'
     };
     return (str || '').replace(/[①②③④⑤⑥⑦⑩⑪⑫⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇]/g, function (match) {
-      return '<img src="/en.pokemon-gl.com/assets/global/images/' + fontname + '/' + match.charCodeAt().toString(16) + '.png" align="top"/>';
+      return '<img src="/assets/global/images/' + fontname + '/' + match.charCodeAt().toString(16) + '.png" align="top"/>';
     }).replace(/[⑧⑨⑬⑭⑮⑯⑰⑱⑲⑳⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽]/g, function (match) {
       return t[match];
     });
@@ -741,43 +741,43 @@ PGL.Host.prototype = {
     }
   },
   getPdcLoginUrl: function() {
-    var result = { check: '/portal/chkoperation.gif' };
+    var result = { check: 'http://' + this.getPdcDomain() + '/portal/chkoperation.gif' };
     if (this.code == 2918) {
       result.check = [ 'http://www.pokemon.jp/check.gif', 'https://members.pokemon.jp/check.gif' ];
-      result.form = '/login/pgl.html';
+      result.form = 'https://' + this.decrypt('3:8,14:8,13:20,1,2,3,4,5,6,3,8,1,4:-1,2') + '/login/pgl.html';
     } if (this.code == 46003) {
       result.check = [
-        '/check.gif',
-        '/check.gif'
+        'http://' + this.getPdcDomain() + '/check.gif',
+        'https://' + this.decrypt('10,9,10,10:-11,9,5:68,0,3,0,1,2,5,6,7,8,9,10,7,12,5,13:61,6') + '/check.gif'
       ];
-      result.form = '/login/pgl.html';
+      result.form = 'https://' + this.getPdcDomain() + '/login/pgl.html';
     } else if (this.code == 35561) {
       result.check = [
-        '/check.gif',
-        '/check.gif'
+        'http://' + this.getPdcDomain() + '/check.gif',
+        'https://' + this.decrypt('11,1,11,11:-11,1,11:5,2,4,2,0,15,6,7,8,9,1,11,8,13,6,1:5,7') + '/check.gif'
       ];
-      result.form = '/login/pgl.html';
+      result.form = 'https://' + this.getPdcDomain() + '/login/pgl.html';
     } else if (this.code == 38736) {
       result.check = [
-        '/check.gif',
-        '/check.gif'
+        'http://' + this.decrypt('19:6,17:17,14,1:-51,5,6,7,8,1,10,7,12,5,8:-1,6') + '/check.gif',
+        'https://' + this.decrypt('10,1,10,14:-5,1,18:3,12:5,3,11:5,1,17:16,17:17,5,6,7,8,1,10,7,12,5,5:60,6') + '/check.gif'
       ];
-      result.form = '/login/pgl.html';
+      result.form = 'https://' + this.decrypt('17:16,15:8,14,8:-57,5,6,7,8,1,10,7,12,5,2:-12,6') + '/login/pgl.html';
     } else {
-      result.form = '/login/pgl.html';
+      result.form = 'https://' + this.getPdcDomain() + '/login/pgl.html';
     }
     return result;
   },
   getComLoginUrl: function() {
-    var result = { check: '/pglcheck' };
+    var result = { check: 'https://' + this.getComDomain() + '/pglcheck' };
     var cc = { en: 'us' }[ PGL.language ] || PGL.language;
-    var c = '/';
+    var c = 'https://' + this.getComDomain() + '/';
     var so = this.code == 2918 ? 'https://sso.pokemon.com/' : c;
     result.form = c + cc + '/account/logout?next=' + encodeURIComponent(so + 'sso/login?service=' + c + cc +  '/account/pgllogin&locale=' + PGL.language + '&renew=true');
     return result;
   },
   getPkiLoginUrl: function() {
-    var c = '/pgl/';
+    var c = 'http://' + this.getPkiDomain() + '/pgl/';
     return { check: c + 'chkoperation.gif', form: c + 'login_pgl.asp' };
   },
   getSwfHost: function() {

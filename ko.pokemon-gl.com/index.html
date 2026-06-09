@@ -4,23 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=1024" />
   <title>Pokémon Global Link</title>
-  <link rel="stylesheet" type="text/css" href="/cdn2.pokemon-gl.com/src/swf/assets/global/css/theme.css" />
-  <link rel="stylesheet" type="text/css" href="/cdn2.pokemon-gl.com/src/swf/assets/global/ko/css/lang.css" />
-  <link rel="stylesheet" type="text/css" href="/cdn2.pokemon-gl.com/src/swf/top/css/top.css" />
-  <link rel="stylesheet" type="text/css" href="/cdn2.pokemon-gl.com/src/swf/top/ko/css/lang.css" />
+  <link rel="stylesheet" type="text/css" href="http://cdn2.pokemon-gl.com/src/swf/assets/global/css/theme.css" />
+  <link rel="stylesheet" type="text/css" href="http://cdn2.pokemon-gl.com/src/swf/assets/global/ko/css/lang.css" />
+  <link rel="stylesheet" type="text/css" href="http://cdn2.pokemon-gl.com/src/swf/top/css/top.css" />
+  <link rel="stylesheet" type="text/css" href="http://cdn2.pokemon-gl.com/src/swf/top/ko/css/lang.css" />
   <script src="assets/global/js/jquery-1.7.min.js"></script>
   <script src="assets/global/js/jquery.blockUI.js"></script>
-  <script src="/ko.pokemon-gl.com/assets/global/js/jquery.transit.min.js"></script>
-  <script src="/ko.pokemon-gl.com/assets/global/js/jquery.corner.js"></script>
-  <script src="/ko.pokemon-gl.com/assets/global/js/swfobject.js"></script>
-  <script src="assets/global/js/pgl.js"></script>
-  <script src="/ko.pokemon-gl.com/assets/global/js/text.js"></script>
-  <script src="/ko.pokemon-gl.com/report/assets/js/raphael-min.js"></script>
-  <script src="/ko.pokemon-gl.com/report/assets/js/report-utils.js"></script>
-  <script src="/ko.pokemon-gl.com/report/assets/js/pokemons.js"></script>
-  <script src="/ko.pokemon-gl.com/report/assets/js/areas.js"></script>
+  <script src="/assets/global/js/jquery.transit.min.js"></script>
+  <script src="/assets/global/js/jquery.corner.js"></script>
+  <script src="/assets/global/js/swfobject.js"></script>
+  <script src="assets/global/js/pgl.js?rev=3.1"></script>
+  <script src="/assets/global/js/text.js"></script>
+  <script src="/report/assets/js/raphael-min.js"></script>
+  <script src="/report/assets/js/report-utils.js?rev=3"></script>
+  <script src="/report/assets/js/pokemons.js"></script>
+  <script src="/report/assets/js/areas.js?rev=3"></script>
   <script src="top/assets/js/text.js"></script>
-  <script src="top/assets/js/top.js"></script>
+  <script src="top/assets/js/top.js?rev=3.5"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-17682532-2']);
@@ -32,9 +32,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-<script src="../_restore/mock-api-interceptor.js" data-pgl-restore="mock-api-interceptor.js"></script>
-<script src="../_restore/plugin-guards.js" data-pgl-restore="plugin-guards.js"></script>
-<script src="../_restore/runtime-fixes.js" data-pgl-restore="runtime-fixes.js"></script>
 </head>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
   <div id="main">
@@ -132,8 +129,8 @@
           <div class="member-info-pglname"></div>
           <div class="member-info-avatar"></div>
         </div>
-        <a class="login-menu-profile" href="/ko.pokemon-gl.com/profile">마이페이지</a>
-        <a class="login-menu-mailer" href="/ko.pokemon-gl.com/mailer">안심메일</a>
+        <a class="login-menu-profile" href="/profile">마이페이지</a>
+        <a class="login-menu-mailer" href="/mailer">안심메일</a>
         <div class="member-info-rom">
           플레이하고 있는 게임 소프트웨어
           <div class="member-info-rom-image"></div>
@@ -153,7 +150,7 @@
     </div>
 
     <div id="right-buttons">
-      <div class="login-menu-logout logged-in"><a href="/ko.pokemon-gl.com/?p=logout">logout</a></div>
+      <div class="login-menu-logout logged-in"><a href="/?p=logout">logout</a></div>
       <div class="menu-volume"><div id="header-volume-swf"></div></div>
       <div id="pgl-member-count">
         <div class="label">PGL 멤버 수</div>
@@ -165,7 +162,7 @@
       <ul>
       </ul>
       <div id="pdw" class="content-link">
-        <a href="/ko.pokemon-gl.com/pdw/">
+        <a href="/pdw/">
           <h2>PDW</h2>
           <div id="pdw-link-message" class="ticker">
             <div class="text"></div>
@@ -174,7 +171,7 @@
         </a>
       </div>
       <div id="wifi" class="content-link">
-        <a href="/ko.pokemon-gl.com/wifi/">
+        <a href="/wifi/">
           <h2>Wi-Fi 대회</h2>
           <div id="wifi-link-message" class="ticker">
             <div class="text"></div>
@@ -183,19 +180,19 @@
         </a>
       </div>
       <div id="campaign" class="content-link">
-        <a href="/ko.pokemon-gl.com/campaign/">
+        <a href="/campaign/">
           <h2>캠페인</h2>
           <div class="caption">포켓몬 및 커스터마이즈 아이템, 인테리어 등과 같은 선물은 여기.</div>
         </a>
       </div>
       <div id="support" class="content-link">
-        <a href="/ko.pokemon-gl.com/support/">
+        <a href="/support/">
           <h2>고객지원</h2>
           <div class="caption">즐기는 방법 및 캠페인 참가 방법, 문의는 여기.</div>
         </a>
       </div>
       <div id="report-link" class="content-link">
-        <a href="/ko.pokemon-gl.com/report/">
+        <a href="/report/">
           <h2>리포트</h2>
         </a>
       </div>
@@ -204,8 +201,8 @@
   </div>
   <div id="footer">
     <ul id="footer-links">
-      <li><a href="/ko.pokemon-gl.com/terms-of-use/">약속</a></li>
-      <li><a href="/ko.pokemon-gl.com/maintenance/">사이트 점검에 대해서</a></li>
+      <li><a href="/terms-of-use/">약속</a></li>
+      <li><a href="/maintenance/">사이트 점검에 대해서</a></li>
       <li><a href="http://pokemonkorea.co.kr/pgl/footer/browser.asp">PC 설정</a></li>
       <li><a href="http://pokemonkorea.co.kr/pgl/footer/privacy.asp">개인정보취급방침</a></li>
       <li><a href="http://pokemonkorea.co.kr/pgl/footer/copyright.asp">저작권</a></li>
@@ -213,19 +210,19 @@
     </ul>
     <ul id="select-language">
       <li>언어 선택（Language） : &nbsp;&nbsp;&nbsp;</li>
-      <li><a href="/ja.pokemon-gl.com/">日本語</a></li>
-      <li><a href="/en.pokemon-gl.com/">English</a></li>
-      <li><a href="/fr.pokemon-gl.com/">Français</a></li>
-      <li><a href="/it.pokemon-gl.com/">Italiano</a></li>
-      <li><a href="/de.pokemon-gl.com/">Deutsch</a></li>
-      <li><a href="/es.pokemon-gl.com/">Español</a></li>
-      <li><a href="/ko.pokemon-gl.com/">한국어</a></li>
+      <li><a href="http://ja.pokemon-gl.com">日本語</a></li>
+      <li><a href="http://en.pokemon-gl.com">English</a></li>
+      <li><a href="http://fr.pokemon-gl.com">Français</a></li>
+      <li><a href="http://it.pokemon-gl.com">Italiano</a></li>
+      <li><a href="http://de.pokemon-gl.com">Deutsch</a></li>
+      <li><a href="http://es.pokemon-gl.com">Español</a></li>
+      <li><a href="http://ko.pokemon-gl.com">한국어</a></li>
     </ul>
     <div id="copyright">
       <p>© 2013 Pokémon. © 1995-2013 Nintendo/Creatures Inc./GAME FREAK inc. 포켓몬스터, 포켓몬, Pokémon은 Nintendo의 등록상표입니다. Nintendo DS is a trademark of Nintendo. </p>
       <p class="maintenance"><a href="http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php" target="_blank">닌텐도 DS 네트워크 점검정보·가동상황</a></p>
     </div>
-    <div id="badges"><a class="footer-badges-pki" href="http://pokemonkorea.co.kr/" target="_blank"><img src="/ko.pokemon-gl.com/assets/global/ko/images/footer/pki.png"/></a><a class="footer-badges-nintendo" href="http://www.nintendo.co.kr/" target="_blank"><img src="/ko.pokemon-gl.com/assets/global/ko/images/footer/nintendo.png"/></a><a class="footer-badges-wifi" href="http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php" target="_blank"><img src="/ko.pokemon-gl.com/assets/global/ko/images/footer/wifi.png"/></a><span class="footer-badges-ko"><img src="/ko.pokemon-gl.com/assets/global/ko/images/footer/ko.png"/></span></div>
+    <div id="badges"><a class="footer-badges-pki" href="http://pokemonkorea.co.kr/" target="_blank"><img src="/assets/global/ko/images/footer/pki.png"/></a><a class="footer-badges-nintendo" href="http://www.nintendo.co.kr/" target="_blank"><img src="/assets/global/ko/images/footer/nintendo.png"/></a><a class="footer-badges-wifi" href="http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php" target="_blank"><img src="/assets/global/ko/images/footer/wifi.png"/></a><span class="footer-badges-ko"><img src="/assets/global/ko/images/footer/ko.png"/></span></div>
   </div>
 </body>
 </html>

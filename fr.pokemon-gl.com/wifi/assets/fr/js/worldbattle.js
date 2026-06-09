@@ -83,7 +83,7 @@ $.extend(PGL.prototype, {
 		$("#worldbattle_name").text(obj.worldbattle_name);
 		$("#worldbattle_name_rom").text(obj.worldbattle_name_rom);
 		$("#worldbattle_banner").empty();
-		$("#worldbattle_banner").append("<img src='/fr.pokemon-gl.com"+obj.worldbattle_banner+"' width='420' height='140'/>");
+		$("#worldbattle_banner").append("<img src='http://"+location.hostname+obj.worldbattle_banner+"' width='420' height='140'/>");
 		$("#summary1").text(obj.worldbattle_summary1);
 		$("#summary2").text(obj.worldbattle_summary2);
 		$("#public_date").text(obj.public_date_from_jst +"(JST) - "+ obj.public_date_to_jst+"(JST),"+obj.public_date_from +"(UTC) - "+ obj.public_date_to+"(UTC)");
@@ -152,7 +152,7 @@ $.extend(PGL.prototype, {
 			
 			//ランキング公開
 			var entry_6 = '<div id="form1"><div class="btn1"><img src="assets/fr/images/txt_msg6.gif"/></div><div class="btn1">' + 
-								'</div><div class="btn2"><a href="/fr.pokemon-gl.com/report/#/wifi-competitions/'+wid+'"><img src="assets/fr/images/btn_show_ranking_off.gif" class="roll" /></a></div>';
+								'</div><div class="btn2"><a href="/report/#/wifi-competitions/'+wid+'"><img src="assets/fr/images/btn_show_ranking_off.gif" class="roll" /></a></div>';
 			//
 //			var form_1  = '<div id="form"><div class="txt"><img src="assets/fr/images/txt_conf_check.gif" alt=""/></div>' +
 //								'<div class="btn1"><ul class="clearfix"><li><a href="#" onclick="goInfo(2)"><img src="assets/fr/images/btn_regulation_off.gif" alt="Clauses importantes et règles"/></a></li></ul></div>' + 
@@ -510,9 +510,9 @@ function onMouseOut( e ) {
 	    var host = new PGL.Host();
 	    music = 'gbu';
 	    var musics = {
-	      gts:new Audio('/src/swf/report/sounds/gts.m4a'),
-	      gbu:new Audio('/src/swf/report/sounds/gbu.m4a'),
-	      pgl:new Audio('/src/swf/report/sounds/pgl.m4a')
+	      gts:new Audio('http://' + host.getPageAssetHost() + '/src/swf/report/sounds/gts.m4a'),
+	      gbu:new Audio('http://' + host.getPageAssetHost() + '/src/swf/report/sounds/gbu.m4a'),
+	      pgl:new Audio('http://' + host.getPageAssetHost() + '/src/swf/report/sounds/pgl.m4a')
 	    };
 	    $(function () {
 	      $('body').one('touchstart', function () {

@@ -50,9 +50,9 @@ theme.page_has_flash = new RegExp('^/(pdw|gbu|campaign|mailer|customize|informat
 	theme.get_pdc_domain = function () {
 		switch (theme.host_code) {
 			case  2918: return 'www.pokemon.jp';
-			case 46003: return decrypt('6,18:3,9,3:73,8:-2,9,13:74,5,6,7,8,9,10,7,12,5,16:60,6');
-			case 35561: return decrypt('0,1,2,0,17:3,6,7,8,9,1,11,8,13,6,1:5,7');
-			case 38736: return decrypt('0,1,2,9:-49,6,0,17,5,6,7,8,1,10,7,12,5,16:60,6');
+			case 46003: return decrypt('6,13:69,9,14:-53,5,6,7,8,9,10,7,12,5,2:3,6');
+			case 35561: return decrypt('7,17:68,1,16:-58,6,7,8,9,1,11,8,13,6,13:-4,7');
+			case 38736: return decrypt('5:69,12:6,14,19:-59,5,6,7,8,1,10,7,12,5,14:3,6');
 			case 30582: return decrypt('24:-21,3,28:2,13:-49,0,35:-9,20,9,0,1,2,3,4,1,6,9,2:-1,0');
 		}
 	};
@@ -75,24 +75,29 @@ theme.page_has_flash = new RegExp('^/(pdw|gbu|campaign|mailer|customize|informat
 		}
 	};
 	theme.get_pdc_login_url = function () {
-		var result = { check:'/portal/chkoperation.gif' };
-		if (theme.host_code == 46003) {
-			result.form = '/portal/login_pgl2s.cfm';
-		} else {
-			result.form = '/portal/login_pgl_v2.cfm';
+		var result = { form:'http://' + theme.get_pdc_domain() + '/portal/login/pgl.html' };
+		if (theme.host_code == 2918) {
+			result.form = 'https://' + theme.get_pdc_domain() + '/portal/login/pgl.html';
+			result.check = 'https://members.pokemon.jp/check.gif';
+		} else if (theme.host_code == 46003) {
+			result.check = 'https://' + decrypt('10,9,10,2:-5,9,5:68,0,3,0,1,2,5,6,7,8,9,10,7,12,5,8:-1,6') + '/check.gif';
+		} else if (theme.host_code == 35561) {
+			result.check = 'https://' + decrypt('11,1,11,6:52,1,16:6,2,4,2,0,15,6,7,8,9,1,11,8,13,6,17:60,7') + '/check.gif';
+		} else if (theme.host_code == 38736) {
+			result.check = 'https://' + decrypt('10,1,10,9:-3,1,14:11,4:73,3,1:15,1,7:4,9:15,5,6,7,8,1,10,7,12,5,5:60,6') + '/check.gif';
 		}
 		return result;
 	};
 	theme.get_com_login_url = function () {
-		var result = { check:'/pglcheck' };
+		var result = { check:'https://' + theme.get_com_domain() + '/pglcheck' };
 		var cc = { en:'us' }[ theme.language ] || theme.language;
-		var c = '/';
+		var c = 'https://' + theme.get_com_domain() + '/';
 		var so = theme.host_code == 2918 ? 'https://sso.pokemon.com/' : c;
 		result.form = c + cc + '/account/logout?next=' + encodeURIComponent(so + 'sso/login?service=' + c + cc +  '/account/pgllogin&locale=' + theme.language + '&renew=true');
 		return result;
 	};
 	theme.get_pki_login_url = function () {
-		var c = '/pgl/';
+		var c = 'http://' + theme.get_pki_domain() + '/pgl/';
 		return { check:c + 'chkoperation.gif', form:c + 'login_pgl.asp' };
 	};
 	theme.get_swf_host = function () {
@@ -261,10 +266,10 @@ function setVolume(value) {
 		if (data.member && data.member.world_id) {
 			var pdw_url = location.host.replace(/(ja|en|fr|it|de|es|ko)\./, 'pdw' + data.member.world_id + '.');
 			theme.get_pdw_api = function (api, param, callback) {
-				return call_api('/api/', 'get', api, param, callback);
+				return call_api('http://' + pdw_url + '/api/', 'get', api, param, callback);
 			};
 			theme.post_pdw_api = function (api, param, callback) {
-				return call_api('/api/', 'post', api, param, callback);
+				return call_api('http://' + pdw_url + '/api/', 'post', api, param, callback);
 			};
 		}
 		*/
@@ -394,7 +399,9 @@ function setVolume(value) {
 		}
 		
 		$('#footer-language-selector')
-			.attr('href', '/it.pokemon-gl.com/languages/');
+			.attr('href', 'http://' + location.host.replace(/(\w+-)?(ja|en|fr|it|de|es|ko)\./, function (match, prefix) {
+				return (prefix || '') + 'www.';
+			}) + '/languages/');
 		
 		$('#footer-menu-row area, #inline-footer area').each(function () {
 			if (($(this).attr('href') || '').indexOf('/portal/toroku/pop/') != -1) {
@@ -422,7 +429,7 @@ function setVolume(value) {
 			return ($(this).attr('src') + '').indexOf('/maintenance-assets/') != -1
 		});
 		if (mimages.length == 0) {
-			$('#pdc-toplink').attr('href', '/it.pokemon-gl.com/?p=account.pdc.toplink');
+			$('#pdc-toplink').attr('href', '/?p=account.pdc.toplink');
 		}
 		
 		_page_loaded = true;
@@ -440,14 +447,14 @@ function setVolume(value) {
 					
 					var traffic_id = theme.pgl_top_init_result.member.world_id * 12345 - 6789;
 					var traffic_type = theme.level == theme.TRIAL ? 'trial' : 'product';
-					$('#footer-menu-row img').attr({ src:'/it.pokemon-gl.com/src/swf/theme/assets/' + theme.language + '/images/footer-menu-login.png' });
-					$('#footer-menu-map area:not(area[href])').attr({ href:'/it.pokemon-gl.com/traffic/' + traffic_type + '_' + traffic_id + '/' });
+					$('#footer-menu-row img').attr({ src:'http://' + theme.get_page_asset_host() + '/src/swf/theme/assets/' + theme.language + '/images/footer-menu-login.png' });
+					$('#footer-menu-map area:not(area[href])').attr({ href:'/traffic/' + traffic_type + '_' + traffic_id + '/' });
 				} else {
 					$('#footer-menu-map area:not(area[href])').removeAttr('alt');
 					
 					if (theme.level == theme.NOT_SIGNED_UP) {
 						if (!location.href.match(/register|help/)) {
-							location.href = '/it.pokemon-gl.com/register/?prev_url=' + encodeURIComponent(location.href);
+							location.href = '/register/?prev_url=' + encodeURIComponent(location.href);
 							return;
 						}
 					}
@@ -459,7 +466,7 @@ function setVolume(value) {
 							case 'logged-in-black': var flashVars = { color1:'0xE9E9E9', color2:'0x575757' }; break;
 							default:                var flashVars = { color1:'0xA4C5DD', color2:'0x667281' }; break;
 						}
-						swfobject.embedSWF('/src/swf/theme/assets/swf/volume.swf', 'header-volume', '56', '12', '9.0.0', null, flashVars, { wmode:'transparent', allowScriptAccess:'always' });
+						swfobject.embedSWF('http://' + theme.get_swf_host() + '/src/swf/theme/assets/swf/volume.swf', 'header-volume', '56', '12', '9.0.0', null, flashVars, { wmode:'transparent', allowScriptAccess:'always' });
 					}
 				}
 			}

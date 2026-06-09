@@ -3,18 +3,14 @@
 	var arr = window.location.href.split(".");
 	
 	if( arr[0].length == 9 ) {
-		path = (path.indexOf("/cdn2.pokemon-gl.com/") === 0 ? path : "/cdn2.pokemon-gl.com/" + path.replace(/^\/+/, ""));
+		path = "http://cdn2.pokemon-gl.com" + path;
 	}
 	else {
-		if( arr[0].indexOf( "dev2-" ) > 0 || window.location.hostname == "127.0.0.1" || window.location.hostname == "localhost" || window.location.hostname == "::1" || window.location.hostname.indexOf("127.") == 0 ) {
-			path = (path.indexOf("/cdn2.pokemon-gl.com/") === 0 ? path : "/cdn2.pokemon-gl.com/" + path.replace(/^\/+/, ""));
+		if( arr[0].indexOf( "dev2-" ) > 0 ) {
+			path = "http://cdn2.pokemon-gl.com" + path;
 		}
 	}
-
-	var hasMinVersion = swfobject.hasFlashPlayerVersion("10.0.2");
-	console.log("Flash version >= 10.0.2?", hasMinVersion);
-	var flashVer = swfobject.getFlashPlayerVersion();
-	console.log("Detected Flash:", flashVer.major, flashVer.minor, flashVer.release);
+	
 	
 	if (swfobject.hasFlashPlayerVersion("10.0.2"))
 	{		

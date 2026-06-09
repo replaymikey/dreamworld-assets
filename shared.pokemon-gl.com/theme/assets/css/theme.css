@@ -1,9 +1,70 @@
 
-body, td, th, select {
+body, select {
 	font-family:Verdana,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, dl {
+/* FIX FOR IE8 ISSUE:0000603 */
+* html body,
+* html body select {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',Verdana,sans-serif;
+} /* for lte ie6 */
+
+*:first-child+html body,
+*:first-child+html body select {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',Verdana,sans-serif;
+} /* for ie7 */
+
+html>/**/body,
+html>/**/body select {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',Verdana,sans-serif;
+} /* for ie8 */
+
+html:not(:target) body,
+html:not(:target) body select {
+	font-family:Verdana,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+} /* for modern browser not ie8 */
+
+
+
+/* Non-Verdana fonts */
+.smallfont {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+}
+
+/* FIX FOR IE8 ISSUE:0000603 */
+* html body .smallfont {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+} /* for lte ie6 */
+
+*:first-child+html body .smallfont {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+} /* for ie7 */
+
+html>/**/body .smallfont {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+} /* for ie8 */
+
+html:not(:target) body .smallfont {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+} /* for modern browser not ie8 */
+
+
+
+
+
+#gus {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 56px;
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6, p, dl, form {
 	margin: 0;
 	padding: 0;
 }
@@ -27,6 +88,35 @@ img {
 	position: absolute;
 	left: -999em;
 }
+
+
+
+
+
+.pokemon-type {
+	width: 66px;
+	height: 17px;
+	font-size: 10px;
+	background-position: 0 -289px;
+}
+.pokemon-type-normal   { background-position: 0    0px; }
+.pokemon-type-fire     { background-position: 0  -17px; }
+.pokemon-type-water    { background-position: 0  -34px; }
+.pokemon-type-electric { background-position: 0  -51px; }
+.pokemon-type-grass    { background-position: 0  -68px; }
+.pokemon-type-ice      { background-position: 0  -85px; }
+.pokemon-type-fighting { background-position: 0 -102px; }
+.pokemon-type-poison   { background-position: 0 -119px; }
+.pokemon-type-ground   { background-position: 0 -136px; }
+.pokemon-type-flying   { background-position: 0 -153px; }
+.pokemon-type-psychic  { background-position: 0 -170px; }
+.pokemon-type-bug      { background-position: 0 -187px; }
+.pokemon-type-rock     { background-position: 0 -204px; }
+.pokemon-type-ghost    { background-position: 0 -221px; }
+.pokemon-type-dragon   { background-position: 0 -238px; }
+.pokemon-type-dark     { background-position: 0 -255px; }
+.pokemon-type-steel    { background-position: 0 -272px; }
+.pokemon-type-none     { background-position: 0 -289px; }
 
 
 
@@ -69,21 +159,26 @@ html, body {
 }
 #header-pglname {
 	position: absolute;
-	left: 500px;
-	top: 18px;
+	top: 16px;
 	font-size: 11px;
+	width: 145px;
 	/* font-weight: bold; */
 }
 #header-romname {
 	position: absolute;
-	left: 753px;
-	top: 18px;
+	top: 16px;
 	font-size: 11px;
 }
 #header-volume {
 	position: absolute;
-	left: 929px;
 	top: 16px;
+}
+#header-toplink {
+	position: absolute;
+	top: 12px;
+	display: block;
+	right: 10px;
+	height: 20px;
 }
 .not-logged-in #header-pglname,
 .not-logged-in #header-romname {
@@ -191,30 +286,40 @@ html, body {
 #footer-language-selector:hover {
 	background-position: -92px -31px;
 }
-
+#footer-about-campaign-link {
+	width: 107px;
+	position: absolute;
+	left: 667px;
+	top: 21px;
+	background-position: -184px 0;
+}
+#footer-about-campaign-link:hover {
+	background-position: -184px -31px;
+}
 
 .dialog {
-	width: 298px;
-	height: 118px;
-	background: url(../images/dialog-bg.png);
-	padding: 10px;
+	width: 440px;
 	text-align: center;
 	position: relative;
+}
+.dialog .dialog-body {
+	padding: 10px 0;
+	background: url(../images/dialog-bg2.png);
+}
+.dialog .dialog-body p {
+	padding: 5px 20px;
+}
+.dialog .dialog-footer {
+	padding: 10px;
+	background: url(../images/dialog-bg2.png) bottom;
 }
 .dialog p {
 	font-size: 12px;
 	color: #333;
 	padding: 6px 0;
 }
-.dialog-button {
-	position: absolute;
-	left: 0;
-	top: 92px;
-}
-.dialog-button a {
+.dialog .dialog-button a {
 	display: block;
-	position: absolute;
-	top: 0;
 	cursor: pointer;
 	height: 26px;
 }

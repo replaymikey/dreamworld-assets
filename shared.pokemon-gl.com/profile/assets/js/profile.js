@@ -10,7 +10,7 @@
       this.empty();
       var img = $('<img/>').appendTo(this);
       var size = parseInt(img.css('width'));
-      var imagesDir = '/src/swf/assets/global/images/';
+      var imagesDir = 'http://' + host.getPageAssetHost() + '/src/swf/assets/global/images/';
       img.attr({ src:imagesDir + 'block.png' });
       img.css({ 'background-position':(parseInt(img.css('width')) / 2) + 'px ' + (parseInt(img.css('height')) / 2) + 'px' });
       img.css({ 'background-image':'url(' + imagesDir + 'pokemons/' + size + '/' + code + '.png)' });
@@ -239,7 +239,7 @@ $.extend(PGL.prototype, {
           if (blocking) {
             $('<div class="block-icon soft-ui"></div>').appendTo(cell);
           } else if (friend.disable_flag == '0') {
-            $('<a class="mailer-link">mailer</a>').attr({ href:'/en.pokemon-gl.com/mailer/?mailto=' + friend.member_savedata_id }).appendTo(cell);
+            $('<a class="mailer-link">mailer</a>').attr({ href:'/mailer/?mailto=' + friend.member_savedata_id }).appendTo(cell);
           } else {
             $('<span class="mailer-link disabled">mailer</span>').appendTo(cell);
           }
@@ -433,7 +433,7 @@ $.extend(PGL.prototype, {
           // メールリンク
           if (relation == PGL.PDW.RELATION_DREAM_PAL) {
             if (friend.disable_flag == '0') {
-              $('<a class="mailer-link">mailer</a>').attr({ href:'/en.pokemon-gl.com/mailer/?mailto=' + friend.member_savedata_id }).appendTo(cell);
+              $('<a class="mailer-link">mailer</a>').attr({ href:'/mailer/?mailto=' + friend.member_savedata_id }).appendTo(cell);
             } else {
               $('<span class="mailer-link disabled">mailer</span>').appendTo(cell);
             }
@@ -489,7 +489,7 @@ $.extend(PGL.prototype, {
 
 
     if (data.ranking && data.ranking[0].gsid) {
-      $('#gbu-record-link').attr({ href:'/en.pokemon-gl.com/gbu/?rankingto=' + data.ranking[0].gsid }).parent().show();
+      $('#gbu-record-link').attr({ href:'/gbu/?rankingto=' + data.ranking[0].gsid }).parent().show();
     } else {
       $('#gbu-record-link').parent().hide();
     }
@@ -839,7 +839,7 @@ $.extend(PGL.prototype, {
           return;
         }
         rom = data.rom_id;
-        var src = '/en.pokemon-gl.com/top/assets/' + PGL.language + '/images/rom-image-' + { 20:'w', 21:'b', 22:'w2', 23:'b2' }[rom] + '.png';
+        var src = '/top/assets/' + PGL.language + '/images/rom-image-' + { 20:'w', 21:'b', 22:'w2', 23:'b2' }[rom] + '.png';
         $('#dialog-gsidc-body-2 .register').removeClass('rom20 rom21 rom22 rom23').addClass('rom' + rom);
         $('#dialog-gsidc-body-2 .logo').empty().append($('<img/>').attr({ src:src }));
         $('#dialog-gsidc-body-1').fadeOut(300, function () { $('#dialog-gsidc-body-2').fadeIn(300); });
@@ -909,8 +909,8 @@ $.extend(PGL.prototype, {
         var delimiter = PGL.language == 'it' ? ': ' : ' : ';
         var pkg = { 20:'soft-white.png', 21:'soft-black.png', 22:'soft-white2.png', 23:'soft-black2.png' }[this.rom_id];
         var logo = { 20:'rom-image-w.png', 21:'rom-image-b.png', 22:'rom-image-w2.png', 23:'rom-image-b2.png' }[this.rom_id];
-        $('<img/>').attr({ src:'/en.pokemon-gl.com/profile/assets/' + PGL.language + '/images/' + pkg }).appendTo($(target).find('.package').empty());
-        $('<img/>').attr({ src:'/en.pokemon-gl.com/top/assets/' + PGL.language + '/images/' + logo }).appendTo($(target).find('.logo').empty());
+        $('<img/>').attr({ src:'/profile/assets/' + PGL.language + '/images/' + pkg }).appendTo($(target).find('.package').empty());
+        $('<img/>').attr({ src:'/top/assets/' + PGL.language + '/images/' + logo }).appendTo($(target).find('.logo').empty());
         $(target).find('.dialog-gsidc-item-gsidc .value').text(this.gscd);
         $(target).find('.dialog-gsidc-item-time .value').text(this.last_up_time);
         $(target).find('input[name=game]').attr('value', this.gscd).attr({ title:this.rom_name });

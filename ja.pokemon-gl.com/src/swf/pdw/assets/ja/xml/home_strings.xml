@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data locale="ja">
-	<string id="b_aa_1">b_aa_1</string>
-	<string id="b_aa_2">b_aa_2</string>
-	<string id="b_aa_3">b_aa_3</string>
-	<string id="b_aa_4">b_aa_4</string>
+	<string id="b_aa_1">日付順</string>
+	<string id="b_aa_2">名前順</string>
+	<string id="b_aa_3">種類順</string>
+	<string id="b_aa_4">送る</string>
 	<string id="b_aa_5">b_aa_5</string>
-	<string id="b_aa_6">b_aa_6</string>
+	<string id="b_aa_6">たからばこ</string>
 	<string id="b_af_2">b_af_2</string>
 	<string id="dialog_32">dialog_32</string>
 	<string id="dialog_35">とじる</string>

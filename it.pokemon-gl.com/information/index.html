@@ -3,13 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Pok&eacute;mon Global Link</title>
-	<script type="text/javascript" src="/it.pokemon-gl.com/theme/assets/js/jquery-1.4.3.min.js"></script>
-	<script type="text/javascript" src="/it.pokemon-gl.com/theme/assets/js/swfobject.js"></script>
-	<script type="text/javascript" src="/it.pokemon-gl.com/theme/assets/js/theme.js"></script>
+	<script type="text/javascript" src="/theme/assets/js/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="/theme/assets/js/swfobject.js"></script>
+	<script type="text/javascript" src="/theme/assets/js/theme.js?rev=2"></script>
 	<script type="text/javascript">
 		$.each(['/theme/assets/css/theme.css', '/theme/assets/' + theme.language + '/css/lang.css'], function (index, path) {
 			var link = document.createElement('link');
-			link.href = '/it.pokemon-gl.com/src/swf' + path;
+			link.href = 'http://' + theme.get_page_asset_host() + '/src/swf' + path;
 			link.type = 'text/css';
 			link.rel = 'stylesheet';
 			document.getElementsByTagName('head').item(0).appendChild(link);
@@ -25,23 +25,20 @@
 		})();
 	</script>
 	<style type="text/css">body { margin-top: 56px; }</style>
-<script src="../../_restore/mock-api-interceptor.js" data-pgl-restore="mock-api-interceptor.js"></script>
-<script src="../../_restore/plugin-guards.js" data-pgl-restore="plugin-guards.js"></script>
-<script src="../../_restore/runtime-fixes.js" data-pgl-restore="runtime-fixes.js"></script>
 </head>
 <body oncontextmenu="return false" ondragstart="return false">
-<iframe id="gus" src="/gus.pokemon.com/it/" border="0" frameborder="0" allowtransparency="true" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+<iframe id="gus" src="http://gus.pokemon.com/it/" border="0" frameborder="0" allowtransparency="true" scrolling="no" marginwidth="0" marginheight="0"></iframe>
 <div id="wrapper">
 	<div id="wrapper-bg"><div id="wrapper-bg-inner"></div></div>
 	<div id="content-block">
 		<div id="content-block-bg"></div>
 		<div id="content">
 			<div id="header">
-				<h1><a href="/it.pokemon-gl.com/"><span>Pok&eacute;mon GLOBAL LINK</span></a></h1>
+				<h1><a href="/"><span>Pok&eacute;mon GLOBAL LINK</span></a></h1>
 				<div id="header-pglname"></div>
 				<div id="header-romname"></div>
 				<div id="header-volume"></div>
-				<a id="header-toplink" href="/it.pokemon-gl.com/"></a>
+				<a id="header-toplink" href="/"></a>
 			</div>
 <div style="width:1003px; height:528px; margin:0; padding:0;" id="flashcontent">
 <div style="text-align:center; width:900px; margin:0 auto; padding:70px 0;">
@@ -70,10 +67,10 @@ document.write( plugin );
 </div>
 </div>
 
-<script type="text/javascript" src="/it.pokemon-gl.com/src/js/jquery.js"></script>
-<script type="text/javascript" src="/it.pokemon-gl.com/src/js/json2.js"></script>
-<script type="text/javascript" src="/it.pokemon-gl.com/src/js/swfembed2.js"></script>
-<script type="text/javascript" src="/it.pokemon-gl.com/src/js/swfobject.js"></script>
+<script type="text/javascript" src="/src/js/jquery.js"></script>
+<script type="text/javascript" src="/src/js/json2.js"></script>
+<script type="text/javascript" src="/src/js/swfembed2.js"></script>
+<script type="text/javascript" src="/src/js/swfobject.js"></script>
 <script type="text/javascript">
 <!--
 theme.bind('initialize', function (event) {
@@ -92,8 +89,8 @@ theme.bind('initialize', function (event) {
 					document.write('<img src="http://' + theme.get_page_asset_host() + '/src/swf/theme/assets/' + theme.language + '/images/footer-menu.png" width="700" height="31" usemap="#footer-menu-map"/>');
 				</script>
 				<map name="footer-menu-map" id="footer-menu-map">
-					<area shape="rect" coords="0,1,64,14" href="/it.pokemon-gl.com/about/" />
-					<area shape="rect" coords="75,1,156,14" href="/it.pokemon-gl.com/maintenance/" />
+					<area shape="rect" coords="0,1,64,14" href="/about/" />
+					<area shape="rect" coords="75,1,156,14" href="/maintenance/" />
 					<area shape="rect" coords="164,1,265,14" href="http://www.pokemon.com/it/terms-of-use/" />
 					<area shape="rect" coords="274,1,452,14" />
 					<area shape="rect" coords="0,18,133,31" href="http://www.pokemon.com/it/privacy-policy/" />
@@ -101,24 +98,25 @@ theme.bind('initialize', function (event) {
 					<area shape="rect" coords="256,18,367,31" href="http://www.pokemon.com/it/pgl/requirements/" />
 					<area shape="rect" coords="374,18,466,31" href="http://support-it.pokemon.com" />
 				</map>
-				<a id="footer-about-campaign-link" class="footer-buttons" href="http://pglhelp.pokemon.com/it/"></a>
-				<a id="footer-manual-link" class="footer-buttons" href="/it.pokemon-gl.com/help/"></a>
-				<a id="footer-language-selector" class="footer-buttons" href="/www.pokemon-gl.com/languages/"></a>
+				<a id="footer-about-campaign-link" class="footer-buttons" href="http://support-it.pokemon.com/"></a>
+				<a id="footer-manual-link" class="footer-buttons" href="/help/"></a>
+				<a id="footer-language-selector" class="footer-buttons" href="http://www.pokemon-gl.com/languages/"></a>
 			</div>
 			<div id="footer-copy-row">
-				<p>© 2012 Pokémon. © 1995-2012 Nintendo/Creatures Inc./GAME FREAK inc. Pokémon, Pokémon character names and Nintendo DS are trademarks of Nintendo.</p>
+				<p>© 2011 Pokémon. © 1995-2011 Nintendo/Creatures Inc./GAME FREAK inc. Pokémon, Pokémon character names and Nintendo DS are trademarks of Nintendo.</p>
 			</div>
 			<div id="footer-badges-row">
 				<script type="text/javascript">
 					document.write('<img src="http://' + theme.get_page_asset_host() + '/src/swf/theme/assets/' + theme.language + '/images/footer-badges.png" width="973" height="101" usemap="#footer-badges-map"/>');
 				</script>
 				<map name="footer-badges-map" id="footer-badges-map">
-					<area shape="rect" coords="232,30,377,56" href="http://www.pokemon.com/" />
-					<area shape="rect" coords="390,30,475,56" target="_blank" href="http://www.nintendo.it/" />
-					<area shape="rect" coords="485,28,597,57" target="_blank" href="http://www.nintendo.it/" />
-					<area shape="circle" coords="640,43,32" target="_blank" href="http://www.nintendo.it/NOE/it_IT/nintendo_wi-fi_5025.html" />
-					<area shape="rect" coords="686,7,740,77" target="_blank" href="http://www.pegi.info" />
-				</map>
+					<area shape="rect" coords="194,30,339,56" href="http://www.pokemon.com/" />
+					<area shape="rect" coords="352,30,437,56" target="_blank" href="http://www.nintendo.it/" />
+					<area shape="rect" coords="447,28,559,57" target="_blank" href="http://www.nintendo.it/" />
+					<area shape="circle" coords="602,43,32" target="_blank" href="http://www.nintendo.it/NOE/it_IT/nintendo_wi-fi_5025.html" />
+					<area shape="rect" coords="647,5,705,80" href="http://www.pokemon.com/it/privacy-policy/#kids" />
+					<area shape="rect" coords="724,7,778,77" target="_blank" href="http://www.pegi.info" />
+			  </map>
 			</div>
 		</div>
 	</div>

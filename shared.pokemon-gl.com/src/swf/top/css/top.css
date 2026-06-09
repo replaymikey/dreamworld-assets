@@ -45,7 +45,7 @@ body {
   top: 200px;
   width: 560px;
   height: 560px;
-  font-family: Lato, Verdana, 'ï¿½qï¿½ï¿½ï¿½Mï¿½mï¿½pï¿½S Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½I', Meiryo, 'ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N', 'MS P Gothic', sans-serif;
+  font-family: Lato, Verdana, 'ƒqƒ‰ƒMƒmŠpƒS Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'ƒƒCƒŠƒI', Meiryo, '‚l‚r ‚oƒSƒVƒbƒN', 'MS P Gothic', sans-serif;
 }
 .not-logged-in #report {
   top: 10px;
@@ -129,7 +129,7 @@ body {
   width: 16px;
   height: 16px;
   cursor: default;
-  background-image: url(/cdn2.pokemon-gl.com/src/swf/report/images/sex-icon.png);
+  background-image: url(/src/swf/report/images/sex-icon.png);
   text-indent: -9000px;
 }
 #report-gts .trade-deposit .sex-0 {

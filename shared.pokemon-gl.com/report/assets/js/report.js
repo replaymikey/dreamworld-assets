@@ -1102,7 +1102,7 @@ $.fn.extend({
             .addClass('battle-result-' + data.result)
             .children('.value').show().squeezeText(PGL.Text.get('global.gbu.' + data.result)).hide();
           elem.find('.ranking .value').text(data.rank || '-');
-          elem.find('.avatar img').attr({ src:'/fr.pokemon-gl.com/profile/assets/images/avatar/' + data.avator_id + '.png' });
+          elem.find('.avatar img').attr({ src:'/profile/assets/images/avatar/' + data.avator_id + '.png' });
           elem.find('.pglname').squeezeText(data.nickName);
           elem.find('.trainername .value').html(PGL.Utils.renderDSFont('ds-font-6', data.trainerName));
           elem.find('.rating .value').text(data.rating || '-');
@@ -1816,7 +1816,7 @@ $.fn.extend({
       
       target.children('.map').css({ 'background-image':'' });
       setTimeout(function () {
-        var url = '/src/swf/report/images/areas/' + area.gts + '/' + (new Date()).getUTCHours() + '.jpg';
+        var url = 'http://' + self.host.getPageAssetHost() + '/src/swf/report/images/areas/' + area.gts + '/' + (new Date()).getUTCHours() + '.jpg';
         target.children('.map').css({ 'background-image':'url(' + url + ')' });
       }, 1);
       target.find(':animated').stop(true, true);
@@ -2169,7 +2169,7 @@ $.fn.extend({
         if (showRankChange && record.rank_type !== undefined) {
           $('<div class="ranking-change"></div>').appendTo(li).addClass('ranking-change-' + ['keep', 'up', 'down'][record.rank_type]);
         }
-        $('<div class="avatar"></div>').append($('<img/>').attr({ src:'/fr.pokemon-gl.com/profile/assets/images/avatar/' + record.avator_id + '.png' })).appendTo(li);
+        $('<div class="avatar"></div>').append($('<img/>').attr({ src:'/profile/assets/images/avatar/' + record.avator_id + '.png' })).appendTo(li);
         $('<div class="pglname"></div>').appendTo(li).squeezeText(record.pgl_name || '?');
         $('<div class="country"></div>').text((PGL.Report.areasByPGL[record.country_id] || {}).iso3166 || '').appendTo(li);
         $('<div class="hitarea"></div>').appendTo(li);
@@ -2487,9 +2487,9 @@ PGL.setMain(function () {
       var host = new PGL.Host();
       music = 'gts';
       var musics = {
-        gts:new Audio('/src/swf/report/sounds/gts.m4a'),
-        gbu:new Audio('/src/swf/report/sounds/gbu.m4a'),
-        pgl:new Audio('/src/swf/report/sounds/pgl.m4a')
+        gts:new Audio('http://' + host.getPageAssetHost() + '/src/swf/report/sounds/gts.m4a'),
+        gbu:new Audio('http://' + host.getPageAssetHost() + '/src/swf/report/sounds/gbu.m4a'),
+        pgl:new Audio('http://' + host.getPageAssetHost() + '/src/swf/report/sounds/pgl.m4a')
       };
     } catch (e) {
     }

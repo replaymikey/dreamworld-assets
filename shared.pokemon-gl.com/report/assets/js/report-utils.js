@@ -26,7 +26,7 @@ $.fn.extend({
         image.empty();
         var img = $('<img/>').appendTo(image);
         var size = parseInt(img.css('width'));
-        var imagesDir = '/src/swf/assets/global/images/';
+        var imagesDir = 'http://' + PGL.Report.host.getPageAssetHost() + '/src/swf/assets/global/images/';
         img.attr({ src:imagesDir + 'block.png' });
         img.css({ 'background-position':(parseInt(img.css('width')) / 2) + 'px ' + (parseInt(img.css('height')) / 2) + 'px' });
         img.css({ 'background-image':'url(' + imagesDir + 'pokemons/' + size + (options.reflect ? 'ref' : '') + '/' + code + '.png)' });
