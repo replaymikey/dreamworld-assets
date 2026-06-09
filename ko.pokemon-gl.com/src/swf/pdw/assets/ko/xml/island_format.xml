@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data locale="ko">
-	<string id="MESSAGE_TYPE_6" size="5" />
-	<string id="s_aa_2" letterSpacing="-0.4" />
-	<string id="y_aa_8" letterSpacing="-0.6" />
-	<string id="y_aa_9" letterSpacing="-0.05" />
-	<string id="y_aa_13" leading="1" />
-	<string id="y_ad_4" leading="-1" />
-	<string id="y_ad_16" leading="-8" />
-	<string id="y_zc_6" letterSpacing="-0.3" />
+	<string id="y_aa_16" letterSpacing="0.05" />
+	<string id="y_aa_18" letterSpacing="-0.1" />
+	<string id="y_za_1" size="10" />
 </data>

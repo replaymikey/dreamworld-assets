@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<data locale="ko">
-	<string id="t_ac_4" letterSpacing="-0.2" />
-	<string id="t_ac_6" leading="8" />
-	<string id="t_ac_7" leading="2" />
-	<string id="t_ac_8" size="3" />
-</data>
+<data locale="ko" />

@@ -6,12 +6,13 @@
 	<string id="MESSAGE_TYPE_5">MESSAGE_TYPE_5</string>
 	<string id="MESSAGE_TYPE_6">MESSAGE_TYPE_6</string>
 	<string id="s_aa_2">내 홈으로 돌아가기</string>
-	<string id="t_aa_1">t_aa_1</string>
-	<string id="y_aa_1">y_aa_1</string>
-	<string id="y_aa_2">y_aa_2</string>
+	<string id="t_aa_1">꿈의나무 미터</string>
+	<string id="y_aa_1">꿈의나무 미터</string>
+	<string id="y_aa_2">꿈의나무까지
+앞으로[画面数]</string>
 	<string id="y_aa_3">꿈섬 「작은 숲」</string>
 	<string id="y_aa_4">꿈섬 「빛나는 바다」</string>
-	<string id="y_aa_5">꿈섬 「드넓은 하늘」</string>
+	<string id="y_aa_5" unofficial="true">꿈섬 「드넓은 하늘」</string>
 	<string id="y_aa_6">내 홈으로 돌아가기</string>
 	<string id="y_aa_8">y_aa_8</string>
 	<string id="y_aa_9">y_aa_9</string>
@@ -19,10 +20,10 @@
 	<string id="y_aa_13">y_aa_13</string>
 	<string id="y_aa_14">y_aa_14</string>
 	<string id="y_aa_15">y_aa_15</string>
-	<string id="y_aa_16">꿈섬 「오래된 양옥」</string>
-	<string id="y_aa_17">꿈섬 「울퉁불퉁 산」</string>
-	<string id="y_aa_18">꿈섬 「서늘한 동굴」</string>
-	<string id="y_aa_19">꿈섬 「꿈 공원」</string>
+	<string id="y_aa_16" unofficial="true">꿈섬 「오래된 양옥」</string>
+	<string id="y_aa_17" unofficial="true">꿈섬 「울퉁불퉁 산」</string>
+	<string id="y_aa_18" unofficial="true">꿈섬 「서늘한 동굴」</string>
+	<string id="y_aa_19" unofficial="true">꿈섬 「꿈 공원」</string>
 	<string id="y_ad_1">[ポケモン名](이)다!</string>
 	<string id="y_ad_2">[ポケモン名]는(은) 배가 고픈것 같다.</string>
 	<string id="y_ad_3">y_ad_3</string>
@@ -33,16 +34,16 @@
 	<string id="y_ad_11">[ポケモン名]와(과) 미아를 찾겠습니까?</string>
 	<string id="y_ad_13">[ポケモン名]는(은) 고래왕 등에서 놀고 싶어 한다.</string>
 	<string id="y_ad_14">[ポケモン名]와(과) 고래왕이 있는 곳에 놀러 가겠습니까?</string>
-	<string id="y_ad_15">y_ad_15</string>
-	<string id="y_ad_16">y_ad_16</string>
-	<string id="y_ad_18">y_ad_18</string>
-	<string id="y_ad_19">y_ad_19</string>
-	<string id="y_ad_20">y_ad_20</string>
-	<string id="y_ad_21">y_ad_21</string>
-	<string id="y_ad_22">y_ad_22</string>
-	<string id="y_ad_23">y_ad_23</string>
-	<string id="y_ad_24">y_ad_24</string>
-	<string id="y_ad_25">y_ad_25</string>
+	<string id="y_ad_15">[ポケモン名]는(은) 목이 마른 것 같다.</string>
+	<string id="y_ad_16">[ポケモン名](와)과 음료수를 나르겠습니까?</string>
+	<string id="y_ad_18">[ポケモン名]는(은) 담력테스트를 하고 싶은 것 같다.</string>
+	<string id="y_ad_19">[ポケモン名]와(과) 촛불 끄기를 하겠습니까?</string>
+	<string id="y_ad_20">[ポケモン名]는(은) 보석을 모으고 싶은 것 같다.</string>
+	<string id="y_ad_21">[ポケモン名]와(과) 보석을 모으겠습니까?</string>
+	<string id="y_ad_22">[ポケモン名]는(은) 얼음 위에서 놀고 싶어 한다.</string>
+	<string id="y_ad_23">[ポケモン名]와(과) 얼음 위에서 놀겠습니까?</string>
+	<string id="y_ad_24">[ポケモン名]는(은) 호수에서 놀고 싶어 한다.</string>
+	<string id="y_ad_25">[ポケモン名](와)과 호수에서 놀겠습니까?</string>
 	<string id="y_ad_26">y_ad_26</string>
 	<string id="y_ad_27">y_ad_27</string>
 	<string id="y_ad_28">y_ad_28</string>
@@ -52,7 +53,7 @@
 	<string id="y_ad_32">y_ad_32</string>
 	<string id="y_ad_33">y_ad_33</string>
 	<string id="y_af_1">[ポケモン名]와(과) 사이가 좋아졌습니다.</string>
-	<string id="y_af_2">포켓몬:</string>
+	<string id="y_af_2">포켓몬 닉네임:</string>
 	<string id="y_af_3">특성:</string>
 	<string id="y_af_4">타입:</string>
 	<string id="y_af_5">성별:</string>
@@ -82,15 +83,15 @@
 	<string id="y_ag_18">y_ag_18</string>
 	<string id="y_ag_19">y_ag_19</string>
 	<string id="y_ah_1">y_ah_1</string>
-	<string id="y_ai_1">y_ai_1</string>
-	<string id="y_aj_1">y_aj_1</string>
+	<string id="y_ai_1">[道具名]를(을) 찾았다</string>
+	<string id="y_aj_1">[道具名]를(을) 보물상자에 넣었다</string>
 	<string id="y_al_1">y_al_1</string>
-	<string id="y_za_1">y_za_1</string>
-	<string id="y_zb_2">y_zb_2</string>
-	<string id="y_zc_3">y_zc_3</string>
-	<string id="y_zc_4">y_zc_4</string>
-	<string id="y_zc_5">y_zc_5</string>
-	<string id="y_zc_6">y_zc_6</string>
-	<string id="y_zc_7">y_zc_7</string>
-	<string id="y_zd_4">y_zd_4</string>
+	<string id="y_za_1">꿈섬에 도착했다. 작은 숲에 가려 한다.</string>
+	<string id="y_zb_2" unofficial="true">꿈섬에 도착했다. 빛나는 바다에 가려 한다.</string>
+	<string id="y_zc_3" unofficial="true">꿈섬에 도착했다. 드넓은 하늘에 가려 한다.</string>
+	<string id="y_zc_4" unofficial="true">꿈섬에 도착했다. 오래된 양옥에 가려 한다.</string>
+	<string id="y_zc_5" unofficial="true">꿈섬에 도착했다. 울퉁불퉁 산에 가려 한다.</string>
+	<string id="y_zc_6" unofficial="true">꿈섬에 도착했다. 서늘한 동굴에 가려 한다.</string>
+	<string id="y_zc_7" unofficial="true">꿈섬에 도착했다. 꿈 공원에 가려 한다.</string>
+	<string id="y_zd_4" unofficial="true">(임시)</string>
 </data>

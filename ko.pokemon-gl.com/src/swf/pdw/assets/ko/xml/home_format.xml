@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<data locale="ko">
-	<string id="b_aa_4" letterSpacing="-0.15" />
-	<string id="dialog_32" leading="-4" />
-	<string id="h_ca_10" size="1" />
-	<string id="h_ee_3" leading="4" />
-	<string id="h_ee_7" leading="1" />
-	<string id="h_ee_9" letterSpacing="0.05" />
-	<string id="p_aa_1" leading="2" />
-	<string id="p_aa_4" letterSpacing="0.05" />
-</data>
+<data locale="ko" />
