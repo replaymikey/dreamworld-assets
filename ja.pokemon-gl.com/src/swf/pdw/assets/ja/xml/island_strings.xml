@@ -64,13 +64,13 @@
 	<string id="y_af_11">y_af_11</string>
 	<string id="y_ag_1">y_ag_1</string>
 	<string id="y_ag_2">y_ag_2</string>
-	<string id="y_ag_3">y_ag_3</string>
+	<string id="y_ag_3">ひこうレースでゴールできなかった。</string>
 	<string id="y_ag_4">y_ag_4</string>
 	<string id="y_ag_5">y_ag_5</string>
 	<string id="y_ag_6">y_ag_6</string>
 	<string id="y_ag_7">y_ag_7</string>
 	<string id="y_ag_8">y_ag_8</string>
-	<string id="y_ag_9">y_ag_9</string>
+	<string id="y_ag_9">[ポケモン名]はざんねんそうだ。</string>
 	<string id="y_ag_10">y_ag_10</string>
 	<string id="y_ag_11">y_ag_11</string>
 	<string id="y_ag_12">y_ag_12</string>
@@ -81,7 +81,7 @@
 	<string id="y_ag_17">y_ag_17</string>
 	<string id="y_ag_18">y_ag_18</string>
 	<string id="y_ag_19">y_ag_19</string>
-	<string id="y_ah_1">y_ah_1</string>
+	<string id="y_ah_1">[ポケモン名]はいなくなってしまった…</string>
 	<string id="y_ai_1">[道具名]を見つけた</string>
 	<string id="y_aj_1">[道具名]をたからばこにしまった</string>
 	<string id="y_al_1">y_al_1</string>
