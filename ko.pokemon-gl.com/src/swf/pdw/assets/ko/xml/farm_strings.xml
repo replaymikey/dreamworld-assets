@@ -27,14 +27,14 @@
 	<string id="k_ae_2">푹신푹신한 땅에
 나무열매를 심겠습니까?</string>
 	<string id="k_aff_1">이 나무열매를 심겠습니까?</string>
-	<string id="k_afff_1">k_afff_1</string>
+	<string id="k_afff_1">[arg0]를(을) 심었습니다</string>
 	<string id="k_ag_1">자세히 보기</string>
 	<string id="k_ag_2">[arg0]가(이) 심어져있다!</string>
-	<string id="k_aha_1">k_aha_1</string>
+	<string id="k_aha_1">땅이 충분히 젖은 것 같다!</string>
 	<string id="k_ahb_1">k_ahb_1</string>
 	<string id="k_ahb_2">k_ahb_2</string>
-	<string id="k_ai_1">k_ai_1</string>
-	<string id="k_aj_1">k_aj_1</string>
+	<string id="k_ai_1">[arg0]의 눈이 나왔다!</string>
+	<string id="k_aj_1">[arg0]의 줄기가 커졌다!</string>
 	<string id="k_ak_1">[arg0]의 꽃이 피어있다!</string>
 	<string id="k_al_1">[arg0]가(이) 열려있다!</string>
 	<string id="k_am_1">[arg0]를(을) [arg1]개 얻었습니다.</string>
