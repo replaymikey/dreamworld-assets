@@ -29,6 +29,13 @@
 	<string id="h_cc_1">Go to the Island of Dreams?</string>
 	<string id="h_cc_2">Yes</string>
 	<string id="h_cc_3">No</string>
+	<string id="h_da_2">Check Dream Pals</string>
+	<string id="h_da_3">Return to your home.</string>
+	<string id="h_da_4">[PGLニックネーム]'s Dream Pal map</string>
+	<string id="h_db_1" unofficial="true">Dream Pal Pad</string>
+	<string id="h_db_2" unofficial="true">Dream Pals</string>
+	<string id="h_db_3" unofficial="true">Incoming Requests</string>
+	<string id="h_db_4" unofficial="true">Outgoing Requests</string>
 	<string id="h_cc_4">Go to the Island of Dreams.</string>
 	<string id="h_ea_1">Redecorate</string>
 	<string id="h_ea_2">Check Treasure Chest</string>
